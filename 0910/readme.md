@@ -18,4 +18,7 @@
 
 - <스타트태그> contents </end tag> => elements (각각의 태그는 하나의 객체이며 트리의 노드가 된다.)
 - white characters는 빈칸,tab,new line이 여러 개더라도 빈칸 하나로 취급한다.
-- 빈칸을 강제로 만드려면 <!-- &nbsp; -->을사용하면 된다. 하나당 빈칸 하나를 생성한다. 
+- 빈칸을 강제로 만드려면 <!-- &nbsp; --> 을사용하면 된다. 하나당 빈칸 하나를 생성한다.
+- br 태그: 항상 새 라인에서 시작하여 출력한다. => block elements
+- span 태그: 이어서 출력한다 => inline elements
+- body에서 사용하는 태그는 보통 block elements이거나 inline elements이다.
