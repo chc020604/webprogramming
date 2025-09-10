@@ -22,3 +22,7 @@
 - br 태그: 항상 새 라인에서 시작하여 출력한다. => block elements
 - span 태그: 이어서 출력한다 => inline elements
 - body에서 사용하는 태그는 보통 block elements이거나 inline elements이다.
+- class는 한 문서에 여러개 있어도 되지만 id는 하나만 있어야한다.
+- 속성은 중첩가능하다. (nastied?)
+- a 태그 (앵커 태그) => 하이퍼링크를 만듦
+- 
