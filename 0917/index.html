@@ -6,6 +6,14 @@
 </head>
 <body>
     <style>
+        body {
+            background-color: linen;
+        }
+
+        hr {
+            border: 1px solid black;
+        }
+        
         h2 {
             color: blue;
         }
@@ -15,7 +23,7 @@
     </style>
     <h2>자기소개</h2>
     <hr>
-    <p>
+    <p style="color: firebrick;">
         안녕하세요. 저는 경성대학교 소프트웨어학과에 재학중인 21학번 조현창입니다.<br>
     </p>
     <h4>활용가능 언어</h4>
@@ -26,12 +34,22 @@
             width: 60px;
             }
         </style>
-        <li><span>자바</span> <progress value="40" max="100"></progress> 40%</li>
-        <li><span>파이썬</span> <progress value="20" max="100"></progress> 20%</li>
-        <li><span>C</span> <progress value="20" max="100"></progress> 20%</li>
-        <li><span>html</span> <progress value="10" max="100"></progress> 10%</li>
+        <li><span><b>자바</b></span> <progress value="40" max="100"></progress> <span style="color: purple; font-size: small;">40%</span></li>
+        <li><span><b>파이썬</b></span> <progress value="20" max="100"></progress> <span style="color: purple; font-size: small;">20%</span></li>
+        <li><span><b>C</b></span> <progress value="20" max="100"></progress> <span style="color: purple; font-size: small;">20%</span></li>
+        <li><span><b>html</b></span> <progress value="10" max="100"></progress> <span style="color: purple; font-size: small;">10%</span></li>
     </ul>
     <form>
+        <style>
+            legend {
+                font-weight: bold;
+            }
+            fieldset {
+                width: 195px;
+                border: 2px solid black;
+                padding: 10px;
+            }
+        </style>
         <fieldset>
         <legend>로그인</legend>
         <table>
@@ -53,3 +71,4 @@
     </form>
 </body>
 </html>
+
