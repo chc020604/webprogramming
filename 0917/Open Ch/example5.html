@@ -1,46 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>도형 서식 폼 만들기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            width: 500px;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #000;
+        }
+        legend {
+            font-weight: bold;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+
+        select, input[type="number"], input[type="color"]{
+            vertical-align: middle;
+            width: 80px;
+        }
+        select, input[type="range"]{
+            vertical-align: middle;
+            width: 150px;
+        }
+
+    </style>
 </head>
 <body>
+
     <h2>도형 서식 폼 만들기</h2>
     <hr>
-    <form>
-        <style>
-            legend {
-                font-weight: bold;
-            }
-            fieldset{
-                border: 2px solid black;
-            }
-            label, select {
-                margin: 5px;
-            }
-        </style>
-        <fieldset>
-        <legend>도형 서식</legend>
-            <label for="line">선종류:</label>
-            <select id="line" name="line">
-                <option value="solid">선없음</option>
-                <option value="dashed">실선</option>
-                <option value="dotted">점선</option>
 
-            </select><br>
-            <label for="color">색상:</label>
-            <select id="color" name="color">
-                <option value="red">빨강</option>
-                <option value="green">초록</option>
-                <option value="blue">파랑</option>
-            </select><br>
-            <label for="size">크기:</label>
-            <select id="size" name="size">
-                <option value="small">작게</option>
-                <option value="medium">보통</option>
-                <option value="large">크게</option>
-            </select><br>
-        </fieldset>
+    <fieldset>
+        <legend>도형 서식 입력</legend>
+
+        <div>
+            <label for="lineType">선 종류</label>
+            <select id="lineType" name="lineType">
+                <option value="none">선없음</option>
+                <option value="solid" selected>실선</option>
+                <option value="dashed">점선</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="lineWeight">선 두께</label>
+            <input type="number" id="lineWeight" name="lineWeight" min="0" value="1">
+            <label for="lineColor">선 색</label>
+            <input type="color" id="lineColor" name="lineColor" value="#000000">
+        </div>
+
+        <div>
+            <label for="opacity">투명도(0~100)</label>
+            <input type="range" id="opacity" name="opacity" min="0" max="100" value="100">
+        </div>
+        
+    </fieldset>
+
 </body>
 </html>
