@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        @keyframes roro {
+            50%{ transform: rotate(-90deg);}
+            100%{ transform: rotate(90deg);}
+        }
+    
 
+        img{
+            transform: rotate(90deg);
+            animation-name: roro;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>어지러워요</h3>
+    <hr>
+    <img width="100" height="100" src="spongebob.png">
+</body>
+</html>
