@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    
+        while(true){
+            const line = prompt("출력할 줄 수를 입력하시오.", "");
+            if(line%2==0){
+                alert("홀수를 입력하세요.");
+                line = prompt("출력할 줄 수를 입력하시오.", "");
+            }else{
+                break;
+            }
+        }
+
+    for (let i = 0; i < line; i++) {
+      for (let j = 0; j < line - i - 1; j++) {
+        document.write("&nbsp;&nbsp;");
+      }
+      for (let j = 0; j < 2 * i + 1; j++) {
+        document.write("*");
+      }
+      document.write("<br>");
+    }
+    </script>
+  </body>
+</html>

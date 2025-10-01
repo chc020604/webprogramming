@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <h2>윤년?평년?</h2>
+    <hr>
+    <script>
+        const year = prompt("년도를 입력하세요.", "");
+        if (year !== null) {
+            const numYear = parseInt(year);
+            if (!isNaN(numYear)) {
+                if ((numYear % 4 === 0 && numYear % 100 !== 0) || (numYear % 400 === 0)) {
+                    document.write(numYear + "년은 윤년(leap year)입니다.");
+                } else {
+                    document.write(numYear + "년은 평년(common year)입니다.");
+                }
+            } else {
+                alert("올바른 숫자를 입력해주세요.");
+            }
+        }
+    </script>
+</body>
+</html>

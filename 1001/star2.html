@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const line = prompt("출력할 줄 수를 입력하시오.", "");
+
+      for (let i = line; i >= 1; i--) {
+        for (let j = 1; j <= i - 1; j++) {
+          document.write("&nbsp;&nbsp;");
+        }
+        for (let k = 1; k <= line - i + 1; k++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
