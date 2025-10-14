@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>월화수목금토일</title>
+    
+</head>
+<body>
+<h3>월화수목금토일</h3>
+<hr>
+    <script>
+        let day = prompt("월화수목금토일 중에서 입력하세요");
+        let go;
+        if(day =="금" || day == "토" || day=="일"){
+            go = "휴일";
+        }
+        else {go = "출근"};
+        document.write(day+"요일은 "+go);
+    </script>
+</body>
+</html>
