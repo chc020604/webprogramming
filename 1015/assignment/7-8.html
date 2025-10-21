@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 150px;
+        padding: 10px;
+        display: inline-block;
+    }
+</style>
+<body>
+    <script>
+        
+        for (let i=0; i<16; i++){
+            let r = Math.floor(Math.random()*256);
+            let g = Math.floor(Math.random()*256);
+            let b = Math.floor(Math.random()*256);
+            let str = "<div style='background-color: rgb(";
+            str += r; str+=","+g; str+=","+b;
+            str += ")'>"+"rbg("+r+","+g+","+b+")</div>";
+            document.write(str);   
+        }
+    </script>
+</body>
+</html>

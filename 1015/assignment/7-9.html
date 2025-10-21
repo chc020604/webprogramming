@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let book = new Object();
+        book.title = "HTML5";
+        book.author = "황기태";
+        book.price = 20000;
+
+	    document.write("book : ");
+	    document.write(book.title + ", ");
+	    document.write(book.author + ", ");
+	    document.write(book.price + "<br>");
+
+        let literer = {
+            title :"HTML5",
+            author : "황기태",
+            price : 20000,
+        }
+        document.write("literer : ");
+	    document.write(literer.title + ", ");
+	    document.write(literer.author + ", ");
+	    document.write(literer.price + "<br>");
+
+        function prototype(title,author,price){
+            this.title = title;
+            this.author = author;
+            this. price = price;
+        }
+        let pro = new prototype("HTML5","황기태",20000);
+        document.writeln("prototype : "+pro.title+","+pro.author+","+pro.price)
+    </script>
+    
+</body>
+</html>

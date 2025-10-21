@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>                    
+        let n=[]
+        for(let i=0; i<5; i++){
+            n[i] = prompt("정수입력","");
+        }
+         
+        document.writeln("정수 5개 입력받아 역순으로 출력");
+        document.writeln("<hr>");
+        document.writeln("입력된 수의 배열<br>");
+        for(let i=0; i<5; i++){
+            document.writeln(n[i]+" ");
+        }
+        document.writeln("<hr>");
+        document.writeln("역순으로 재정렬된 배열<br>");
+        n.sort().reverse();
+
+        for(let i=0; i<5; i++){
+            document.writeln(n[i]+" ");
+        }
+    </script>
+
+</body>
+</html>
