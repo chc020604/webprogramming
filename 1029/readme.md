@@ -20,7 +20,7 @@
   3. css3 스타일
   4. 이벤트 리스너 (어떤 이벤트가 발생하는지 확인하는 요소)
   5. 콘텐츠 ( 스타트 태그와 엔드 태그 안에 들어가있는 요소 )
-  ***자바스크립트에서는 node라 부르고 html에서는 object라 부름***
+  **자바스크립트에서는 node라 부르고 html에서는 object라 부름**
 
 * DOM 객체의 5개 구성 요소
     1. 프로퍼티(property)
@@ -30,7 +30,21 @@
     5. CSS3 스타일
   **DOM 객체 마다 구성요소 5개 전부 가지고 있다**
 
-* 
+* innerHTML 프로퍼티
+   * 시작 태그와 종료 태그 사이에 들어 있는 HTML 콘텐츠
+
+* this 활용
+  * this는 자바와 같이 현재 객체를 가리킨다
+  * obj는 자바의 object 클래스와 비슷하게 최상위 클래스라고 생각하면 된다.
+ 
+* document 객체
+   * document ( html의 body 부분 )
+   * document는 DOM객체가 아니다
+
+* document.write()와 document.writeln()
+
+**script태그는 가급적 문서의 아래에 있어야 좋다**
+
 
 
 
