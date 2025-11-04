@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border : 1px solid violet;
+        width: 250px;
+        height: 100px;
+        text-align: center;
+        font-size: 70px;
+        color: purple;
+        background-color: linen;
+    }
+    span{
+        padding: 10px;
+    }
+</style>
+<body id="game">
+    <h3>겜블링 게임</h3>
+    <p>각 숫자를 클릭하면 0~2사이 난수로 바뀝니다. 다 같은 수라면 승리!</p>
+    <hr>
+   
+    <div>
+        <span id ="0" onclick="func(this)">0</span>
+        <span id ="1" onclick="func(this)">0</span>
+        <span id ="2" onclick="func(this)">0</span>
+    </div>
+    <script>
+        var arr = [1,1,1];
+        let i = document.getElementById("game");
+
+        function func(obj){
+            let num = parseInt(obj.id);
+            
+            if (arr[num] == 1) {
+                arr[num] = 0;
+                obj.innerHTML = Math.floor(Math.random()*3);
+                if((arr[0]==0) && (arr[1]==0) && (arr[2]==0)){
+                iswin();
+            }
+            }
+            
+            
+            
+        }
+         function iswin(){
+                let spann = document.getElementsByTagName("span");
+                let text;
+                if((spann[0].innerHTML == spann[1].innerHTML) && (spann[1].innerHTML == spann[2].innerHTML)){
+                    text = "Success(click here to restart)";
+                }
+                else{
+                    text = "Fail(click here to restart)"
+                }
+                let massage = document.createElement("p");
+                massage.innerHTML = text;
+                massage.style.color = "violet";
+                i.appendChild(massage);
+                massage.addEventListener("click",
+                    function(){
+                        arr = [1,1,1];
+                        spann[0].innerHTML = 0;
+                        spann[1].innerHTML = 0;
+                        spann[2].innerHTML = 0;
+                        i.removeChild(massage);
+                    }
+                )
+            }
+    </script>
+</body>
+</html>

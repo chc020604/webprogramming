@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>innerHTML</h3>
+    <hr>
+    <p onclick="func(this)">이번 여름에는 어디로 여행을 갈까요?</p>
+    <script>
+        function func(obj){
+            obj.innerHTML = prompt("원하는 택스트나 HTML");
+        }
+    </script>
+</body>
+</html>

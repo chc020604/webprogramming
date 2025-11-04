@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <h3>라디오 버튼을 클릭하면 이미지를 출력합니다</h3>
+    <hr>
+    <form>
+        <input name = "fr" type="radio" value="banana.png" onchange="func()">바나나
+        <input name = "fr" type="radio" value="mango.png" onchange="func()">망고
+        <input name = "fr" type="radio" value="apple.png" onchange="func()">사과
+    </form>
+    <img id="image" src="">
+    <script>
+        function func(){
+            let find=null;
+            let fruits = document.getElementsByName("fr");
+            let img = document.getElementById("image");
+
+            for(let i=0; i<fruits.length; i++){
+                if (fruits[i].checked == true){
+                    img.src = fruits[i].value;
+                    break;
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

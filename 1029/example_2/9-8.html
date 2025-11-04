@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.onclick = function(e){
+        let prev = null
+        if(e.target.tagName=="LI"){
+            e.target.style.fontSize="1.3em";
+        }
+        if(prev != null){
+            prev.style.fontSize = "1em";
+        }
+        prev = e.target;
+    }
+</script>
+    <h3>아이템 확대</h3>
+    <hr>
+    <p>여름 방학때
+        <ul >
+            <li>자전거 일주</li>
+            <li>책 100권</li>
+            <li>철인 3종</li>
+            <li>JS 정복</li>
+        </ul>
+    </p>
+</body>
+</html>

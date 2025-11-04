@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button{
+            width: 50px;
+            height: 25px;
+        }
+        input{
+            width: 200px;
+        }
+    </style>
+
+    <h3>계산기 만들기</h3>
+    <hr>
+    <form>
+        <input type="text" id="field" value="0">
+    </form>
+    <table>
+        <tr>
+            <td><button value="back" onclick="back()">BACK</button></td>
+            <td><button value="c" onclick="erase()">CE</button></td>
+            <td><button value="c" onclick="erase()">C</button></td>
+            <td><button value="equal" onclick="res()">=</button></td>
+        </tr>
+        <tr>
+
+                <td><button value="7" onclick="num(this)">7</button></td>
+                <td><button value="8" onclick="num(this)">8</button></td>
+                <td><button value="9" onclick="num(this)">9</button></td>
+                <td><button value="/" onclick="num(this)">/</button></td>
+        </tr>
+        <tr>
+            <td><button value="4" onclick="num(this)">4</button></td>
+            <td><button value="5" onclick="num(this)">5</button></td>
+            <td><button value="6" onclick="num(this)">6</button></td>
+            <td><button value="*" onclick="num(this)"> *</button></td>
+        </tr>
+    <tr>
+        <td><button value="3" onclick="num(this)">3</button></td>
+        <td><button value="2" onclick="num(this)">2</button></td>
+        <td><button value="1" onclick="num(this)">1</button></td>
+        <td><button value="+" onclick="num(this)">+</button></td>
+    </tr>
+    <tr>
+        <td><button value="0" onclick="num(this)">0</button></td>
+        <td><button value="-" onclick="num(this)">-</button></td>
+        <td><button value="NONE" >NONE</button></td>
+        <td><button value="NONE" >NONE</button></td>
+    </tr>
+    </table>
+    <script>
+        let fd = document.getElementById("field");
+        function back(){
+            fd.value = fd.value.substring(0,fd.value.length-1);
+        }
+        function erase(){
+            fd.value = "";
+        }
+        function res(){
+            fd.value = eval(fd.value);
+        }
+        function num(obj){
+            fd.value += obj.value;
+        }
+    </script>
+
+</body>
+</html>

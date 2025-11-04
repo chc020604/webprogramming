@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <p>수식을 입력하고 Enter를 입력하세요</p>
+    <form action="">
+        식 <input type="text" id="exp" onkeydown="cal(event)"><br>
+        값 <input type="text" id="result">
+    </form>
+    <script>
+        function cal(e){
+            if(e.key == "Enter"){
+            let exp = document.getElementById("exp");
+            let result = document.getElementById("result");
+            result.value = eval(exp.value);
+            }
+        }
+    </script>
+</body>
+</html>

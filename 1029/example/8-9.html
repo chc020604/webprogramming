@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면</title>
+</head>
+<body>
+    <h3>라면 끓이는 순서</h3>
+    <hr>
+    <ol type="A" style="background-color:yellowgreen" onclick="func(this)">
+        <li>물을 끓인다</li>
+    </ol>
+    <script>
+        function func(obj){
+            let t = prompt("입력할 내용");
+            let n = document.createElement("li");
+            n.innerHTML = t;
+            obj.appendChild(n);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>아이템 마우스를 올리면 설명출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li id ="0" onmouseover = "overfunc(event)" onmouseout="outfunc()">자전거 일주</li>
+        <li id ="1" onmouseover = "overfunc(event)" onmouseout="outfunc()">책 100권</li>
+        <li id ="2" onmouseover = "overfunc(event)" onmouseout="outfunc()">철인 3종</li>
+        <li id ="3" onmouseover = "overfunc(event)" onmouseout="outfunc()">JS 마스터</li>
+    </ul>
+    <div id="dv"></div>
+</body>
+
+<script>
+    let commmnet = ["야호","일주일에 한권씩","자전거 , 수영, 달리기","웹프로그래밍"];
+    function overfunc(e){
+        let n = null;
+        switch(e.target.id){
+            case "0": n=0; break;
+            case "1": n=1; break;
+            case "2": n=2; break;
+            case "3": n=1; break;
+        }
+        let dv = document.getElementById("dv");
+        dv.innerHTML = commmnet[n];
+        dv.style.left = e.clientX + "px";
+        dv.style.top = e.clientY + "px";
+        dv.style.border = "1px solid yellowgreen";
+        dv.style.height = "80px";
+        dv.style.width = "200px";
+        dv.style.visibility = "visible";
+    }
+    function outfunc(){
+        let dv = document.getElementById("dv");
+        dv.style.visibility = "hidden";
+    }
+</script>
+</html>
